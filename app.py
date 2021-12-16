@@ -23,7 +23,7 @@ def webhook():
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
-    print(json.dumps(req, indent=4))
+    #print(json.dumps(req, indent=4))
 
     res = processRequest(req)
 
@@ -37,8 +37,10 @@ def webhook():
 def processRequest(req):
     if req.get("queryResult").get("action") == "yahooWeatherForecast":
 
+        print("processRequest")
         baseurl="https://api.openweathermap.org/data/2.5/weather?"
         yql_url = makeYqlQuery(req,baseurl)
+        print(yql_url)
         if yql_url is None:
             return {}
         result = urlopen(yql_url).read()
