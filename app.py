@@ -100,11 +100,11 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-        "speech": speech,
-        "displayText": speech,
+        "fulfillmentText": speech,
+        "fulfillmentMessages": [],
         # "data": data,
         # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
+        "source": "dialogflow-weather-webhook-sample"
     }
 
 if __name__ == '__main__':
