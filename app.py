@@ -91,7 +91,7 @@ def makeWebhookResult(data):
     #temp=int(temp)
     temp = temp-273.15
     #temp=math.floor(temp)
-    temp=str(temp)
+    temp="{:.2f}".format(temp)
 
 
     speech = " Hello !! Today the weather in " + geo_city + " is : " + condition + \
