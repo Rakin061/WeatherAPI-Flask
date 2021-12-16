@@ -87,7 +87,8 @@ def makeWebhookResult(data):
     # print(json.dumps(item, indent=4))
 
     temp=query.get('temp')
-    temp=round(int(temp),2)
+    print(temp)
+    #temp=int(temp)
     temp = temp-273.15
     #temp=math.floor(temp)
     temp=str(temp)
