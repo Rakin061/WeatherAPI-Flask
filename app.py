@@ -35,7 +35,7 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("queryResult").get("action") == "yahooWeatherForecast":
+    if req.get("queryResult").get("action") == "OpenWeatherForecast":
 
         print("processRequest")
         baseurl="https://api.openweathermap.org/data/2.5/weather?"
@@ -47,6 +47,14 @@ def processRequest(req):
         data = json.loads(result)
         res = makeWebhookResult(data)
         return res
+    else:
+        return {
+            "fulfillmentText": "Internal Error! Please try again !",
+            "fulfillmentMessages": [],
+            # "data": data,
+            # "contextOut": [],
+            "source": "dialogflow-weather-webhook-sample"
+        }
 
 def makeYqlQuery(req,baseurl):
     result = req.get("queryResult")
@@ -61,30 +69,17 @@ def makeYqlQuery(req,baseurl):
 def makeWebhookResult(data):
     query = data.get('main')
     if query is None:
-        return {}
+        return {
+            "fulfillmentText": "No Data Found! Please try again !",
+            "fulfillmentMessages": [],
+            # "data": data,
+            # "contextOut": [],
+            "source": "dialogflow-weather-webhook-error"
+        }
     geo_city=data.get('name')
     weather_data=data.get('weather')
     condition=weather_data[0].get('main')
 
-    # result = query.get('queryResult')
-    # if result is None:
-    #     return {}
-    #
-    # channel = result.get('channel')
-    # if channel is None:
-    #     return {}
-    #
-    # item = channel.get('item')
-    # location = channel.get('location')
-    # units = channel.get('units')
-    # if (location is None) or (item is None) or (units is None):
-    #     return {}
-    #
-    # condition = item.get('condition')
-    # if condition is None:
-    #     return {}
-
-    # print(json.dumps(item, indent=4))
 
     temp=query.get('temp')
     print(temp)
