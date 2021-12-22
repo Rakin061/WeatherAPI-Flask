@@ -1,13 +1,12 @@
 
 
-														=======================
-														     Weather API
-														=======================
+                                =======================
+                                        Weather API
+                                =======================
 
-														
-								/**
-								 * @license Copyright (c) 2021, @Salman Rakin, Dept. of CSE, BUET. All rights reserved.
-								 */											
+/**
+* @license Copyright (c) 2021, @Salman Rakin, Dept. of CSE, BUET. All rights reserved.
+* /
 
 
 
