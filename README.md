@@ -4,19 +4,12 @@
                                         Weather API
                                 =======================
 
-/**
-* @license Copyright (c) 2021, @Salman Rakin, Dept. of CSE, BUET. All rights reserved.
-* /
-
-
 
 # Sample Weather API webhook implementation in Python Flask.
-
-#This is  webhook implementation that gets Dialogflow classification JSON (i.e. a JSON output of Dialogflow /query endpoint) 
+This is  webhook implementation that gets Dialogflow classification JSON (i.e. a JSON output of Dialogflow /query endpoint) 
 and returns a fulfillment response.
 
-# Using this powerful web service bot/AGENT can respond to users collecting information from external web services like weather APIs and even external Databases!!
-
+Using this powerful web service bot/AGENT can respond to users collecting information from external web services like weather APIs and even external Databases!!
 More info about Dialogflow webhooks could be found here:
 [Dialogflow Webhook](https://dialogflow.com/docs/fulfillment#webhook)
 
@@ -34,12 +27,12 @@ Regarding three tier architecture with [OpenWeathermapAPI](https://openweatherma
 and communicate RESTFUL Web Services with python Request-Response mechanism. All these three tier applications have to work harmonically 
 for completing a successful response to a user.
 
-#Example:
-User: Tell me the weather in Dhaka today  ? 
+# Example:
+
+>User: Tell me the weather in Dhaka today  ? 
 Weather-Agent: Today the weather in Dhaka is Haze and the temperature is 22 C. Thanks !! 
 
-#Features:
-
+# Features:
 	1. Extended Database interaction capability.
 	2. Fully supported with Python Request-Response mechanism.
 	3. Could respond to multiple intents based on action parameters.
@@ -49,8 +42,7 @@ Weather-Agent: Today the weather in Dhaka is Haze and the temperature is 22 C. T
 
 	
 
-#Regards, 
-
+# Regards,
 Developer : Salman Rakin
 
 	
