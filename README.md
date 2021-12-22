@@ -6,17 +6,17 @@
 
 														
 								/**
-								 * @license Copyright (c) 2021, Salman Rakin, Dept. of CSE, BUET. All rights reserved.
+								 * @license Copyright (c) 2021, @Salman Rakin, Dept. of CSE, BUET. All rights reserved.
 								 */											
 
 
 
-# Sample webhook implementation in Python Flask.
+# Sample Weather API webhook implementation in Python Flask.
 
-#This is a really simple webhook implementation that gets Dialogflow classification JSON (i.e. a JSON output of Dialogflow /query endpoint) 
+#This is  webhook implementation that gets Dialogflow classification JSON (i.e. a JSON output of Dialogflow /query endpoint) 
 and returns a fulfillment response.
 
-# Using this powerful web service bot/AGENT can respond to users collecting information from external web services like weather APIs and even Databases!!
+# Using this powerful web service bot/AGENT can respond to users collecting information from external web services like weather APIs and even external Databases!!
 
 More info about Dialogflow webhooks could be found here:
 [Dialogflow Webhook](https://dialogflow.com/docs/fulfillment#webhook)
@@ -27,17 +27,17 @@ More info about Dialogflow webhooks could be found here:
 # What does the service do?
 
 Using this service the Smart Weather Agent can simulate a conversation through providing weather information of cities and geographic coordinates on the globe
-usign the [OpenWeathermapAPI](https://openweathermap.org/api). This application extract the required city from the user query and prepare the request url to call 
-for getting back all the necessary weather parameters as JSON from the API. Finally, based on the response back from the API, an NLD based speech has been built 
+using the [OpenWeathermapAPI](https://openweathermap.org/api). This application extract the required city from the user query and prepare the request url to call 
+for getting back all the necessary weather parameters as JSON from the API. Finally, based on the response back from the API, an NLP based speech has been built 
 to send as the final response to the user with meaningful weather information!!
 
-Regarding three tier architecture with database at the third block this application actually works as a loosely coupled middleware and maintains interaction with Dialogflow using Webhook Protocol 
+Regarding three tier architecture with [OpenWeathermapAPI](https://openweathermap.org/api)  at the third block this application actually works as a loosely coupled middleware and maintains interaction with Dialogflow using Webhook Protocol 
 and communicate RESTFUL Web Services with python Request-Response mechanism. All these three tier applications have to work harmonically 
-for completing a successfull response to a user.
+for completing a successful response to a user.
 
 #Example:
 User: Tell me the weather in Dhaka today  ? 
-User: Hello. Today the weather in Dhaka is Haze and the temperature is 22 C. Thanks !! 
+Weather-Agent: Today the weather in Dhaka is Haze and the temperature is 22 C. Thanks !! 
 
 #Features:
 
@@ -49,8 +49,7 @@ User: Hello. Today the weather in Dhaka is Haze and the temperature is 22 C. Tha
 	6. Nested requested could be invoked to interact external webservices as well as RESTFUL Web Services.
 
 	
-	
-	
+
 #Regards, 
 
 Developer : Salman Rakin
