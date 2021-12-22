@@ -29,8 +29,8 @@ for completing a successful response to a user.
 
 # Example:
 
-    >User: Tell me the weather in Dhaka today  ? 
-    >Weather-Agent: Today the weather in Dhaka is Haze and the temperature is 22 C. Thanks !! 
+> User: Tell me the weather in Dhaka today  ? 
+> Weather-Agent: Today the weather in Dhaka is Haze and the temperature is 22 C. Thanks !! 
 
 # Features:
 	1. Extended Database interaction capability.
